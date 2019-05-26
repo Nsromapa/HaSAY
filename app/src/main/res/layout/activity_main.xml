@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/chat_recycler_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/activity_chat_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/full_chat_bottom"
+        android:paddingLeft="10dp"
+        android:paddingEnd="10dp"
+        android:background="@color/chat_recycler_background"/>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/full_chat_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:paddingBottom="8dp">
+
+
+        <EditText
+            android:id="@+id/activity_message_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:maxHeight="100dp"
+            android:layout_marginEnd="4dp"
+            android:minHeight="40dp"
+            android:textSize="15sp"
+            android:hint="@string/talk_to_hasay"
+            android:textColorHint="@color/white_t75"
+            android:textColor="@android:color/black"
+            android:inputType="text"
+            android:singleLine="true"
+            android:background="@drawable/chat_edittext_background"
+            tools:textColor="@android:color/black"
+            android:overScrollMode="always"
+            android:paddingBottom="5dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:paddingTop="5dp"
+            android:imeOptions="actionSend"/>
+
+
+
+
+        <ImageView
+            android:id="@+id/activity_message_send"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/ic_keyboard_voice_24dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
